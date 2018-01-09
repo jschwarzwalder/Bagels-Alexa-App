@@ -1,0 +1,50 @@
+Test for user response not identified
+
+{
+  "session": {
+    "new": false,
+    "sessionId": "SessionId.4201b3e6-2a91-45cd-a2c0-ee19993ee092",
+    "application": {
+      "applicationId": "amzn1.ask.skill.51c83459-bc5d-4fe0-b1a5-f3398c805415"
+    },
+    "attributes": {
+      "num1": 9,
+      "num3": 7,
+      "num2": 0
+    },
+    "user": {
+      "userId": "amzn1.ask.account.AHNQS7WOQ2HUHDIPJVMVIXM4VXD2YTRLBKOLIEGSE7JM3FSOB72H5F7W4GVB27GEDULYUGJPXSIYUPNUJNOF4MLIBQG6ELGR7QHYECPU4ZS4XXH6VUDNWBHHTRL56UJBXNRJFVH7ICKZGM5QWPRE56HD36OCCJBGRSUR2EAK3VHQHGABEBCOSM5YWCTEQFF6QUCX7OMNEEIYLRY"
+    }
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.f1eb3e63-27cc-45e4-8f50-0f6b9212e4ae",
+    "intent": {
+      "name": "UserGuess",
+      "slots": {
+        "number": {
+          "name": "number"
+        }
+      }
+    },
+    "locale": "en-US",
+    "timestamp": "2018-01-09T03:46:24Z"
+  },
+  "context": {
+    "AudioPlayer": {
+      "playerActivity": "IDLE"
+    },
+    "System": {
+      "application": {
+        "applicationId": "amzn1.ask.skill.51c83459-bc5d-4fe0-b1a5-f3398c805415"
+      },
+      "user": {
+        "userId": "amzn1.ask.account.AHNQS7WOQ2HUHDIPJVMVIXM4VXD2YTRLBKOLIEGSE7JM3FSOB72H5F7W4GVB27GEDULYUGJPXSIYUPNUJNOF4MLIBQG6ELGR7QHYECPU4ZS4XXH6VUDNWBHHTRL56UJBXNRJFVH7ICKZGM5QWPRE56HD36OCCJBGRSUR2EAK3VHQHGABEBCOSM5YWCTEQFF6QUCX7OMNEEIYLRY"
+      },
+      "device": {
+        "supportedInterfaces": {}
+      }
+    }
+  },
+  "version": "1.0"
+}

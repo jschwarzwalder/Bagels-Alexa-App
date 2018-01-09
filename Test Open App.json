@@ -1,0 +1,38 @@
+Test for Opening app
+
+{
+  "session": {
+    "new": true,
+    "sessionId": "SessionId.4201b3e6-2a91-45cd-a2c0-ee19993ee092",
+    "application": {
+      "applicationId": "amzn1.ask.skill.51c83459-bc5d-4fe0-b1a5-f3398c805415"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AHNQS7WOQ2HUHDIPJVMVIXM4VXD2YTRLBKOLIEGSE7JM3FSOB72H5F7W4GVB27GEDULYUGJPXSIYUPNUJNOF4MLIBQG6ELGR7QHYECPU4ZS4XXH6VUDNWBHHTRL56UJBXNRJFVH7ICKZGM5QWPRE56HD36OCCJBGRSUR2EAK3VHQHGABEBCOSM5YWCTEQFF6QUCX7OMNEEIYLRY"
+    }
+  },
+  "request": {
+    "type": "LaunchRequest",
+    "requestId": "EdwRequestId.3d47cfda-e9cc-41e7-963c-a3144f8d9959",
+    "locale": "en-US",
+    "timestamp": "2018-01-09T03:44:15Z"
+  },
+  "context": {
+    "AudioPlayer": {
+      "playerActivity": "IDLE"
+    },
+    "System": {
+      "application": {
+        "applicationId": "amzn1.ask.skill.51c83459-bc5d-4fe0-b1a5-f3398c805415"
+      },
+      "user": {
+        "userId": "amzn1.ask.account.AHNQS7WOQ2HUHDIPJVMVIXM4VXD2YTRLBKOLIEGSE7JM3FSOB72H5F7W4GVB27GEDULYUGJPXSIYUPNUJNOF4MLIBQG6ELGR7QHYECPU4ZS4XXH6VUDNWBHHTRL56UJBXNRJFVH7ICKZGM5QWPRE56HD36OCCJBGRSUR2EAK3VHQHGABEBCOSM5YWCTEQFF6QUCX7OMNEEIYLRY"
+      },
+      "device": {
+        "supportedInterfaces": {}
+      }
+    }
+  },
+  "version": "1.0"
+}
