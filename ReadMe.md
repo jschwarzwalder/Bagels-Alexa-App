@@ -148,7 +148,7 @@ def build_response(session_attributes, speechlet_response):
 ```
 	
 
-## Attach the newly created Lambda Function to you Alexa Skill
+## Attach the newly created Lambda Function to your Alexa Skill
 
 1. Return to Developer Hub
 1. Select the Endpoint AWS Lambda ARN then paste your ARN code from the AWS Lambda
