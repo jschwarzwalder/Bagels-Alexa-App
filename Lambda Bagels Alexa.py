@@ -1,12 +1,3 @@
-"""
-This sample demonstrates a simple skill built with the Amazon Alexa Skills Kit.
-The Intent Schema, Custom Slots, and Sample Utterances for this skill, as well
-as testing instructions are located at http://amzn.to/1LzFrj6
-
-For additional samples, visit the Alexa Skills Kit Getting Started guide at
-http://amzn.to/1LGWsLG
-"""
-
 from __future__ import print_function
 import random
 
@@ -50,12 +41,18 @@ def get_welcome_response():
     """
 
     session_attributes = {}
-    card_title = "Welcome"
-    speech_output = "We made a skill"
+    card_title = "Bagels"
+    speech_output = "Welcome to Pico Fermi Bagels. We will select a three digit number." \
+					 "Each digit will be unique number between 0 and 9." \
+					 "Guess a three digit number and I'll tell you how close you are to guessing my number." \
+					 "If one of the numbers is in my number but in the wrong place. I will say Pico." \
+					 "If you have the right number in the right spot, I will say Fermi." \
+					 "If none of the numbers you guess are in my number I will say Bagels." \
+					 "To make a guess, say my guess is a number"
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
-    reprompt_text = "Please tell me your favorite color by saying, " \
-                    "my favorite color is red."
+    reprompt_text = "Please make a guess by saying, " \
+                    "alexa my guess is followed by a three digit number."
     should_end_session = False
     session_attributes = generate_number()
     return build_response(session_attributes, build_speechlet_response(
@@ -93,14 +90,21 @@ def user_guess(intent, session):
     session_attributes = {}
     should_end_session = False
 
-    if 'Color' in intent['slots']:
-        favorite_color = intent['slots']['Color']['value']
-        session_attributes = create_favorite_color_attributes(favorite_color)
-        speech_output = "I now know your favorite color is " + \
-                        favorite_color + \
-                        ". You can ask me your favorite color by saying, " \
-                        "what's my favorite color?"
-        reprompt_text = "You can ask me your favorite color by saying, " \
+    if 'number' in intent['slots']:
+        user_guess = intent['slots']['number']['value']
+		num1 = session['attributes']['num1']
+		num2 = session['attributes']['num2']
+		num3 = session['attributes']['num3']
+        session_attributes = {
+        "num1": num1,
+        "num2": num2,
+        "num3": num3
+    }
+		correct_guess = is_guess_correct(user_guess, num1, num2, num3)
+        speech_output = "I heard you say  " + \
+                        user_guess + \
+						correct_guess
+        reprompt_text = "Thank you " \
                         "what's my favorite color?"
     else:
         speech_output = "I'm not sure what your favorite color is. " \
@@ -111,6 +115,9 @@ def user_guess(intent, session):
     return build_response(session_attributes, build_speechlet_response(
         card_title, speech_output, reprompt_text, should_end_session))
 
+def is_guess_correct(user_guess, num1, num2, num3):
+	user_guess 
+		return ""
 
 def get_color_from_session(intent, session):
     session_attributes = {}
@@ -175,7 +182,6 @@ def on_intent(intent_request, session):
 
 def on_session_ended(session_ended_request, session):
     """ Called when the user ends the session.
-
     Is not called when the skill returns should_end_session=true
     """
     print("on_session_ended requestId=" + session_ended_request['requestId'] +
